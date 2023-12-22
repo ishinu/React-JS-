@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+
+    <p>To demonstrate syntax for arrow function </p>
+
+    <div id="mydiv1"></div>
+
+    <div id="mydiv2"></div>
+
+    <div id="mydiv3"></div>
+
+    <div id="mydiv4"></div>
+
+    <div id="mydiv5"></div>
+
+
+    <script>
+      //Normal function
+      hello = function(){
+        return "<h1>Hello there (By Normal function)!</h1>";
+      }
+      document.getElementById("mydiv1").innerHTML = hello();
+
+      //Use of Arrow function
+      hello = () => {
+        return "<h1>Hello there (By Arrow function)!</h1>";
+      }
+      document.getElementById("mydiv2").innerHTML = hello();
+
+      //Use of Arrow function for single statement in body
+      hello = () => "<h1>Hello there (Single statement print By Arrow function)!</h1>";
+  
+      document.getElementById("mydiv3").innerHTML = hello();
+
+      //Implementing parameters and using arrow function 
+      hello = (val) => "<h1>Hello </h1>" + val;
+      document.getElementById("mydiv4").innerHTML = hello("<h1>There!</h1>");
+
+      //Implementing single parameter and using arrow function 
+      hello = val => "Hello " + val;
+      document.getElementById("mydiv5").innerHTML = hello("There!");
+
+    </script>
+
+    <!-- <script type="text/babel">
+      function Hello() {
+        return <h1>Hello World1!</h1>;
+      }
+
+      const container = document.getElementById('mydiv');
+      const root = ReactDOM.createRoot(container);
+      root.render(<Hello />)
+    </script> -->
+
+  </body>
+</html>
